@@ -1,0 +1,238 @@
+.main-navigation {
+	clear: both;
+	display: block;
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 0.1875rem 0.1875rem rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 12.5rem;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		float: left;
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__link-hover;
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+.menu-toggle{
+	width: 60px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+#side-navigation{
+	display: block;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: #1E1F2B;
+	top: 0;
+	left: 100%;
+	z-index: 9999;
+	.close{
+		top: 2.5rem;
+		right: 2.063rem !important;
+		height: 3.75rem;
+		width: 3.75rem;
+		background-color: transparent;
+		right: -5rem;
+		position: absolute;
+		cursor: pointer;
+		z-index: 99;
+
+		
+		
+		&:after,&:before{
+			content: '';
+			right: 0;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			-webkit-transform-origin: 0 50%;
+			transform-origin: 0 50%;
+			transition: -webkit-transform .5s;
+			transition: transform .5s;
+			transition: transform .5s,-webkit-transform .5s;
+			transition: transform .5s,-webkit-transform .5s;
+			transition-delay: 0s, 0s;
+			transition-delay: .5s;
+			-webkit-transition-delay: .5s;
+			-moz-transition-delay: .5s;
+			-o-transition-delay: .5s;
+			position: absolute;
+			display: inline-block;
+			height: 0.5rem;
+			width: 2.5rem;
+			background: #fff;
+		}
+
+		&:before{
+			-webkit-transform: translateX(0.625rem) translateY(-1.125rem) rotate(45deg);
+			transform: translateX(0.625rem) translateY(-1.125rem) rotate(45deg);
+		}
+		&:after{
+			-webkit-transform: translateX(0.625rem) translateY(0.625rem) rotate(-45deg);
+			transform: translateX(0.625rem) translateY(0.625rem) rotate(-45deg);
+		}
+	}
+
+	ul{
+		font-weight: 400;
+		font-size: 1.4rem;
+		line-height: normal;
+		line-height: normal;
+		line-height: 3.5rem;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		text-transform: uppercase;
+		li{
+			a{
+				color: white;
+				&:hover{
+					text-decoration: none;
+					color: $color__link-hover;
+				}
+			}
+		}
+	}
+}
+.main-navigation ul {
+	display: none;
+}
+
+@media screen and (min-width: 67.500em) {
+	.menu-toggle {
+		display: none !important;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 767px){
+	#side-navigation ul{
+		font-size: 3.4rem;
+		line-height: 5.5rem;
+	}
+}
+
+@media screen and (min-width: 575px) and (max-width: 767px) {
+	#side-navigation ul{
+		font-size: 2.4rem;
+		line-height: 4.5rem;
+	}
+}
+ 
+@media screen and (max-width: 575px) {
+
+	#side-navigation ul{
+		font-size: 2rem;
+		line-height: 4.5rem;
+	}
+}
+
+@media screen and (max-width: 320px) {
+
+	#side-navigation ul{
+	    font-size: 1.5rem;
+    	line-height: 3.5rem;
+	}
+}

@@ -1,0 +1,18 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+h1,h2,h3{
+	font-family: $font_titles;
+	@include font-size(2.25);
+	font-weight: 700;
+	color: $color__titles;
+	text-align: center;
+}
+h3{
+	@include font-size(1.5);
+	text-align: left;
+}
+h4{
+	@include font-size(1.313);
+	color: $color__titles;
+}

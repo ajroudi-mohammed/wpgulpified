@@ -1,0 +1,125 @@
+header{
+	position: absolute;
+	width: 100%;
+	.header-container{
+		width: 90rem;
+		height: 5.5rem;
+		max-width: 90%;
+		margin: 0 auto;
+		padding-top: 2.5rem;
+		padding-bottom: 2rem;
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+
+		.site-branding{
+			display: inline-block;
+			.custom-logo-link{
+				img{
+					width: 12.44rem;
+				}
+			}
+		}
+	}
+}
+.header-home{
+	background-image: url("images/dist/bg.png");
+	height: 48.4375rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+	padding-top: 14.13rem;
+	.header-title-container{
+		h1{
+			text-align: left ;
+			p{
+				margin-bottom: 2.938rem;
+				line-height: 1.5;
+			}
+		}
+		
+		.btn{
+			&:hover{
+				background: $color__link-hover;
+				color: white;
+				border: 1px solid $color__link-hover;
+			}
+		}
+	}
+	.header-img-container{
+		img.header-picto{
+			margin-top: 1.438rem;
+		}
+		
+	}
+	
+}
+ 
+@media screen and (max-width: 1400px) {
+	.header-home{
+		background-position: center bottom;
+	}
+	
+}
+
+@media screen and (max-width: 765px) {	
+	.header-home{
+		background-position: center -9rem;
+		height: auto;
+		padding-bottom: 5rem;
+		padding-top: 9.13rem;
+		.header-title-container{
+			text-align: center;
+			h1{
+				font-size: 2rem;
+				text-align: center ;
+				p{
+					font-size: 2rem;
+				}
+			}
+			a.btn{
+				font-size: 1rem;
+				display: inline-block;
+			}
+		}
+		.header-picto{
+			width: 56%;
+			margin: 0 auto;
+			margin-bottom: 0px;
+			display: block;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+#masthead {
+
+    .header-container{
+    	transition: height 0.5s ease 0s;
+    }
+    &.fixed {
+	    background: #edf4fb;
+	    position: fixed;
+	    top: 0;
+	    z-index: 3;
+	    -webkit-box-shadow: 0px 0px 0.9375rem -0.3125rem rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 0.9375rem -0.3125rem rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 0.9375rem -0.3125rem rgba(0,0,0,0.75);
+	    .header-container{
+	    	height: 5rem;
+	    	padding: 0;
+	    }
+	}
+}
+
+
+	

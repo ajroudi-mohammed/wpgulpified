@@ -1,0 +1,33 @@
+{
+  "name": "palm-beach",
+  "version": "1.0.0",
+  "description": "=== Palm Beach === Author URI: https://themezee.com Theme URI: https://themezee.com/themes/palm-beach/ Contributors: themezee Tags: two-columns, custom-background, custom-header, custom-menu, editor-style, rtl-language-support, grid-layout, blog, news, featured-image-header, featured-images, flexible-header, full-width-template, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns Requires at least: 4.7 Tested up to: 5.3 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.0",
+    "browser-sync": "^2.26.7",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.2.0",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.10.2",
+    "postcss-assets": "^5.0.0"
+  }
+}
