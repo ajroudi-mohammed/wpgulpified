@@ -20,8 +20,8 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
+<body <?php body_class(); ?> data-barba="wrapper">
+<div id="page" class="site" data-barba="container" data-barba-namespace="home">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'palm-beach' ); ?></a>
 
 	<header id="masthead" class="site-header">
