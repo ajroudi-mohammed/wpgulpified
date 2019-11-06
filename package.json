@@ -13,6 +13,7 @@
     "browser-sync": "^2.26.7",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
+    "es6-promise": "^4.2.8",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
@@ -28,6 +29,10 @@
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
     "jshint": "^2.10.2",
-    "postcss-assets": "^5.0.0"
+    "postcss-assets": "^5.0.0",
+    "uglify-js": "github:mishoo/UglifyJS2#harmony"
+  },
+  "dependencies": {
+    "@barba/core": "^2.7.1"
   }
 }

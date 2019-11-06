@@ -1,29 +1,35 @@
 <?php
 /**
- * The template for displaying articles in the search loop
+ * Template part for displaying results in search pages
  *
- * @package Palm Beach
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Palm_Beach
  */
 
 ?>
 
-<div class="post-column clearfix">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php if ( 'post' === get_post_type() ) : ?>
+		<div class="entry-meta">
+			<?php
+			palm_beach_posted_on();
+			palm_beach_posted_by();
+			?>
+		</div><!-- .entry-meta -->
+		<?php endif; ?>
+	</header><!-- .entry-header -->
 
-		<?php palm_beach_post_image(); ?>
+	<?php palm_beach_post_thumbnail(); ?>
 
-		<header class="entry-header">
+	<div class="entry-summary">
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-summary -->
 
-			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		</header><!-- .entry-header -->
-
-		<div class="entry-content entry-excerpt clearfix">
-			<?php the_excerpt(); ?>
-			<?php palm_beach_more_link(); ?>
-		</div><!-- .entry-content -->
-
-	</article>
-
-</div>
+	<footer class="entry-footer">
+		<?php palm_beach_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
+</article><!-- #post-<?php the_ID(); ?> -->

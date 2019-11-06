@@ -1,89 +1,13 @@
 body,
+button,
 input,
 select,
 optgroup,
-button,
 textarea {
 	color: $color__text-main;
 	font-family: $font__main;
-	@include font-size(1.125);
+	@include font-size(1);
 	line-height: $font__line-height-body;
-}
-a.btn.btn-secondary{
-	@include font-size(1.125);
-	font-family: $font_titles;
-	font-weight: 600;
-}
-.nav-menu{
-	li{
-		margin-left: 2.375rem;
-		a{
-			font-family: $font__main;
-			@include font-size(1.125);
-			font-weight: 500;
-			color: $color__titles;
-			&:hover{
-				color: $color__link-hover
-			}
-		}
-
-	}
-}
-.header-title-container{
-	p{
-		font-family: $font_titles;
-		@include font-size(2.625);
-		color: $color__titles;
-		font-weight: 700;
-		span{
-			color: $color__link-hover
-		}
-	}
-}
-
-.section-quote{
-	.quote-background{
-		.quote{
-			
-			&:before{
-				font-family: "Font Awesome 5 Free";
-				content: "\f10d";
-				font-weight: 900;
-				color : $color__link-hover;
-				@include font-size(3.25);
-			}
-			&:after{
-				font-family: "Font Awesome 5 Free";
-				content: "\f10e";
-				font-weight: 900;
-				color : $color__link-hover;
-				@include font-size(3.25);
-			}
-			p{
-				font-family: $font__quote;
-				@include font-size(1.313);
-				color: $color__quotecolor;
-				line-height: 2.5rem;
-			}
-			
-			span{
-				font-family: $font__main;
-				font-style: italic;
-				color: $color__link-hover;
-				@include font-size(1.5);
-			}
-		}
-	}
-}
-
-.section-produits{
-	.products{
-		.produit{
-			p{
-				@include font-size(1);
-			}
-		}
-	}
 }
 
 @import "headings";

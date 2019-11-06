@@ -1,74 +1,58 @@
 <?php
 /**
- * The header for our theme.
+ * The header for our theme
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @package Palm Beach
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Palm_Beach
  */
 
-?><!DOCTYPE html>
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
-
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-<?php wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'palm-beach' ); ?></a>
 
-	<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header">
+		<div class="site-branding">
+			<?php
+			the_custom_logo();
+			if ( is_front_page() && is_home() ) :
+				?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php
+			else :
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			endif;
+			$palm_beach_description = get_bloginfo( 'description', 'display' );
+			if ( $palm_beach_description || is_customize_preview() ) :
+				?>
+				<p class="site-description"><?php echo $palm_beach_description; /* WPCS: xss ok. */ ?></p>
+			<?php endif; ?>
+		</div><!-- .site-branding -->
 
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'palm-beach' ); ?></a>
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'palm-beach' ); ?></button>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+			) );
+			?>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
 
-		<?php do_action( 'palm_beach_header_bar' ); ?>
-
-		<header id="masthead" class="site-header clearfix" role="banner">
-
-			<div class="header-main container clearfix">
-
-				<div id="logo" class="site-branding clearfix">
-
-					<?php palm_beach_site_logo(); ?>
-					<?php palm_beach_site_title(); ?>
-					<?php palm_beach_site_description(); ?>
-
-				</div><!-- .site-branding -->
-
-				<nav id="main-navigation" class="primary-navigation navigation clearfix" role="navigation">
-					<?php
-						// Display Main Navigation.
-						wp_nav_menu( array(
-							'theme_location' => 'primary',
-							'container' => false,
-							'menu_class' => 'main-navigation-menu',
-							'echo' => true,
-							'fallback_cb' => 'palm_beach_default_menu',
-							)
-						);
-					?>
-				</nav><!-- #main-navigation -->
-
-			</div><!-- .header-main -->
-
-		</header><!-- #masthead -->
-
-		<?php // Display slider or header image on homepage.
-		if ( is_home() or is_page_template( 'template-magazine.php' ) or is_page_template( 'template-slider.php' )   ) :
-
-			palm_beach_slider();
-			palm_beach_header_image();
-
-		else :
-
-			palm_beach_header_title();
-
-		endif; ?>
-
-		<?php palm_beach_breadcrumbs(); ?>
-
-		<div id="content" class="site-content container clearfix">
+	<div id="content" class="site-content">

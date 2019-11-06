@@ -6,9 +6,7 @@
 .page {
 	margin: 0 0 1.5em;
 }
-.page{
-	overflow-x: hidden;
-}
+
 .updated:not(.published) {
 	display: none;
 }
@@ -22,70 +20,4 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
-}
-
-
-section.post-page{
-	margin-top: 14.69rem;
-	margin-bottom: 8rem;
-	.post-img{
-		margin-top: 2rem;
-		img{
-			width: 100%;
-		}
-	}
-
-
-	.post-info{
-		padding-top: 1.625rem;
-		padding-bottom: 1.6rem;
-		a{
-			span{
-				font-family: $font__main;
-				color: $color__titles;
-			}
-
-			&:hover{
-				text-decoration: none !important;
-			}
-		}
-
-		i{
-			font-family: $font__main;
-			font-size: 1rem;
-			color: #a7a7a7;
-			margin-left: 1.875rem;
-		}
-	}
-
-	.post-page-content{
-		p{
-			font-family: $font_titles;
-		}
-		a{
-			color: $color__link-hover;
-			&:hover{
-				color: $color__titles;
-				text-decoration: none;
-			}
-		}
-	}
-
-	.nav-links{
-		margin-top: 1.8rem;
-		a{
-			font-family: $font__main;
-			&:hover{
-				text-decoration: none;
-			}
-		}
-	}
-
-}
-.page{
-	section.post-page{
-		.post-page-content{
-			margin-top: 1.8rem;
-		}
-	}
 }

@@ -1,32 +1,33 @@
 <?php
 /**
- * The template for displaying the footer.
+ * The template for displaying the footer
  *
- * Contains all content after the main content area and sidebar
+ * Contains the closing of the #content div and all content after.
  *
- * @package Palm Beach
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Palm_Beach
  */
 
 ?>
 
 	</div><!-- #content -->
 
-	<?php do_action( 'palm_beach_before_footer' ); ?>
-
-	<div id="footer" class="footer-wrap">
-
-		<footer id="colophon" class="site-footer container clearfix" role="contentinfo">
-
-			<?php do_action( 'palm_beach_footer_menu' ); ?>
-
-			<div id="footer-text" class="site-info">
-				<?php do_action( 'palm_beach_footer_text' ); ?>
-			</div><!-- .site-info -->
-
-		</footer><!-- #colophon -->
-
-	</div>
-
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'palm-beach' ) ); ?>">
+				<?php
+				/* translators: %s: CMS name, i.e. WordPress. */
+				printf( esc_html__( 'Proudly powered by %s', 'palm-beach' ), 'WordPress' );
+				?>
+			</a>
+			<span class="sep"> | </span>
+				<?php
+				/* translators: 1: Theme name, 2: Theme author. */
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'palm-beach' ), 'palm-beach', '<a href="http://underscores.me/">Underscores.me</a>' );
+				?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

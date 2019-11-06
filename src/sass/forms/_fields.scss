@@ -18,11 +18,9 @@ textarea {
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
 	padding: 3px;
-	background-color: #F5F7FA;
-	transition: background-color 0.5s ease;
+
 	&:focus {
 		color: $color__text-input-focus;
-		background-color: white;
 	}
 }
 
@@ -32,18 +30,4 @@ select {
 
 textarea {
 	width: 100%;
-}
-
-#submit{
-	color: white;
-	background: $color__titles;
-	border: 1px solid $color__titles;
-	padding: 0.8rem 2rem;
-	font-size: 1rem;
-	transition: background-color 0.5s ease;
-	&:hover{
-		background: $color__link-hover;
-		border: 1px solid $color__link-hover;
-	}
-	
 }
